@@ -1,0 +1,513 @@
+/* ===========================
+   CSS RESET & BASE STYLES
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #e6f3f9;
+}
+
+/* ===========================
+   NAVIGATION BAR (Float Elements)
+   =========================== */
+
+#navbar {
+    background-color: #0077be;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    float: left;
+    color: #ffffff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+.nav-menu {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    float: left;
+    margin-left: 2rem;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+/* Clear floats in nav */
+.nav-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
+
+h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 700;
+    color: #1a252f;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    font-weight: 600;
+    color: #0077be;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+    border-bottom: 3px solid #0077be;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: #0077be;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 75ch;
+}
+
+.tagline {
+    font-size: 1.125rem;
+    color: #5a6c7d;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.intro {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: #34495e;
+    float: left;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.25rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+strong {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* ===========================
+   LINK STYLES (all 4 states)
+   =========================== */
+
+a:link {
+    color: #0077be;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:visited {
+    color: #005a8c;
+}
+
+a:hover {
+    color: #00a8e8;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #004d73;
+}
+
+/* ===========================
+   LAYOUT & STRUCTURE
+   =========================== */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem clamp(1rem, 5%, 2rem);
+}
+
+/* Hero Section (uses #id selector) */
+#hero {
+    background: linear-gradient(135deg, #006ba6 0%, #0077be 50%, #00a8e8 100%);
+    color: #ffffff;
+    padding: 3rem 0 4rem;
+    margin-bottom: 3rem;
+}
+
+#hero h1,
+#hero .tagline,
+#hero .intro {
+    color: #ffffff;
+}
+
+/* Profile Image (uses .class selector with float) - 4:5 ratio */
+.profile-img {
+    width: 200px;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    float: right;
+    margin: 0 0 1.5rem 1.5rem;
+}
+
+/* Campus Image (Fifth Float) - 4:5 ratio */
+.campus-img {
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #0077be;
+    box-shadow: 0 3px 10px rgba(0, 119, 190, 0.2);
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+}
+
+/* Clear float for proper flow */
+#hero::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Main Content Sections */
+main {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2.5rem clamp(1.5rem, 5%, 2.5rem);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* ===========================
+   SKILLS LIST
+   =========================== */
+
+.skills-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding-left: 0;
+}
+
+.skills-list li {
+    padding-left: 1.75rem;
+    margin-bottom: 0.875rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.skills-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #0077be;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* ===========================
+   HIGHLIGHT BOX (Float)
+   =========================== */
+
+.highlight-box {
+    float: left;
+    background-color: #d4ebf7;
+    border-left: 4px solid #0077be;
+    padding: 1rem 1.25rem;
+    margin: 0 1.5rem 1rem 0;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    min-width: 180px;
+    max-width: 220px;
+}
+
+.highlight-box strong {
+    color: #005a8c;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* ===========================
+   INFO CARD (Float)
+   =========================== */
+
+.info-card {
+    float: right;
+    background: linear-gradient(135deg, #00a8e8 0%, #0077be 100%);
+    color: #ffffff;
+    padding: 1.25rem 1.5rem;
+    margin: 0 0 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 119, 190, 0.2);
+    min-width: 200px;
+    max-width: 240px;
+}
+
+.info-card strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 1.0625rem;
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Clear floats after sections */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ===========================
+   CALL-TO-ACTION BUTTON
+   =========================== */
+
+#portfolio-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #0077be;
+    color: #ffffff !important;
+    padding: 0.875rem 2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #005a8c;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.btn-primary:active {
+    background-color: #004d73;
+    transform: translateY(0);
+}
+
+/* ===========================
+   FOOTER / CONTACT
+   =========================== */
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 2.5rem 0 2rem;
+    text-align: center;
+}
+
+footer .container {
+    text-align: center;
+}
+
+footer h2 {
+    color: #ffffff;
+    border-bottom: 3px solid #0077be;
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-email {
+    font-size: 1.25rem;
+    margin: 1.5rem auto;
+    text-align: center;
+    display: block;
+}
+
+.contact-email a {
+    color: #00a8e8;
+    font-weight: 600;
+}
+
+.contact-email a:hover {
+    color: #5dccff;
+}
+
+.footer-note {
+    font-size: 0.875rem;
+    color: #95a5a6;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ===========================
+   FOCUS STYLES (Accessibility)
+   =========================== */
+
+a:focus,
+.btn-primary:focus {
+    outline: 3px solid #0077be;
+    outline-offset: 3px;
+}
+
+/* ===========================
+   EXPERIENCE PAGE STYLES
+   =========================== */
+
+.experience-item {
+    background-color: #ffffff;
+    border-left: 4px solid #0077be;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 119, 190, 0.1);
+}
+
+.exp-header h2 {
+    margin-top: 0;
+    color: #0077be;
+    font-size: 1.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.company {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 0.5rem;
+}
+
+.duration {
+    display: inline-block;
+    font-size: 0.9375rem;
+    color: #5a6c7d;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.location {
+    display: inline-block;
+    font-size: 0.9375rem;
+    color: #5a6c7d;
+    margin-left: 1rem;
+}
+
+.exp-description {
+    margin-top: 1rem;
+}
+
+.exp-description p {
+    margin-bottom: 1rem;
+}
+
+.achievements {
+    list-style: none;
+    margin: 1rem 0;
+    padding-left: 0;
+}
+
+.achievements li {
+    padding-left: 1.75rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.achievements li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0077be;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Skills Grid */
+#skills-overview {
+    margin-top: 3rem;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background-color: #e6f3f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 3px solid #
