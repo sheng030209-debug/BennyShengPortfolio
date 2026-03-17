@@ -437,6 +437,14 @@ a:focus,
     padding-bottom: 0;
 }
 
+.projname {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #587c9f;
+    margin-top: -1rem;
+}
+
 .company {
     display: block;
     font-size: 1.125rem;
