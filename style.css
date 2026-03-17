@@ -196,6 +196,7 @@ a:active {
     height: 250px;
     border-radius: 12px;
     object-fit: cover;
+    object-position: 0px -1rem;
     border: 5px solid #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     float: right;
