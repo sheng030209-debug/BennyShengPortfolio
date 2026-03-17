@@ -148,13 +148,13 @@ strong {
    =========================== */
 
 a:link {
-    color: #0077be;
+    color: #f1f5f7;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 a:visited {
-    color: #005a8c;
+    color: #f1f5f7;
 }
 
 a:hover {
@@ -163,7 +163,7 @@ a:hover {
 }
 
 a:active {
-    color: #004d73;
+    color: #f1f5f7;
 }
 
 /* ===========================
